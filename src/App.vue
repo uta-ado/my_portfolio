@@ -3,8 +3,10 @@
 
 <template>
   <div>
-    <Header />
-    <RouterView />
+    <div class="container">
+      <Header />
+      <RouterView />
+    </div>
   </div>
 </template>
 
