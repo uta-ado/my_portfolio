@@ -46,6 +46,7 @@ const computedFloatItems = computed(() => [
         display: flex
         justify-content: center
         padding-top: 50px
+        height: 100vh
         &__marquee
             &-wrapper 
                 height: 7%

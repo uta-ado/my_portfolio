@@ -37,7 +37,7 @@ const navbarLinks = computed(() => [
         background: rgb(28, 28, 28)
         max-width: 565px
         width: 100%
-        min-height: 50px
+        max-height: 50px
         display: flex
         align-items: center
         padding: 20px
@@ -60,5 +60,8 @@ const navbarLinks = computed(() => [
             line-height: 29px
             & a 
                 color: white
+                font-family: Montserrat Alternates
+                letter-spacing: 0px
+                font-weight: 700
         
 </style>
