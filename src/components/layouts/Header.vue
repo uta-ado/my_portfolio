@@ -34,7 +34,7 @@ const computedFloatItems = computed(() => [
             <div class="header__marquee-block">
                 <div class="header__marquee-item" v-for="(item, index) in computedFloatItems" :key="index">
                     <span><img src="@/assets/images/icons/marquee-icon.svg" alt=""></span>
-                    <span>{{ item.title }}</span>
+                    <span class="header__marquee-item__title">{{ item.title }}</span>
                 </div>
             </div>
         </Marquee>
@@ -56,6 +56,7 @@ const computedFloatItems = computed(() => [
                 width: 100%
                 --duration:32s
                 justify-content: space-between
+                border-bottom: 1px solid rgba(255, 255, 255, 0.25)
                 & > div 
                     min-width: 100vw
                 & .marquee-flex-row 
@@ -69,4 +70,12 @@ const computedFloatItems = computed(() => [
                 flex: 1
                 display: flex
                 gap: 43%
+                &__title 
+                    color: rgb(255, 255, 255)
+                    font-family: Montserrat Alternates
+                    font-size: 20px
+                    font-weight: 400
+                    line-height: 24px
+                    letter-spacing: 0px
+                    text-align: center
 </style>

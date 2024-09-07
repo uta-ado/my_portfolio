@@ -1,25 +1,21 @@
 <script setup>
 
-const getImageUrl = (url) => {
-    return new URL(url, import.meta.url).href
-}
-
 const computedSkills = computed(() => [
     {
         title: 'Figma',
-        img: '@/assets/images/about/figma.svg'
+        img: './images/about/figma.svg'
     },
     {
         title: 'Photoshop',
-        img: '@/assets/images/about/photoshop.svg'
+        img: './images/about/photoshop.svg'
     },
     {
         title: 'Illustrator',
-        img: '@/assets/images/about/illustrator.svg'
+        img: './images/about/illustrator.svg'
     },
     {
         title: 'Corel draw',
-        img: '@/assets/images/about/corel.svg'
+        img: './images/about/corel.svg'
     },
 ])
 </script>
@@ -27,7 +23,7 @@ const computedSkills = computed(() => [
 <template>
     <section class="about">
         <div class="about__wrapper">
-            <h2 class="about__title section-title">О себе</h2>
+            <h2 class="about__title section-title">О себе <img src="@/assets/images/icons/section-star.svg" alt=""></h2>
             <div class="about__block">
                 <div class="about__block-left">
                     <div class="about__block-info">
@@ -43,7 +39,7 @@ const computedSkills = computed(() => [
                         <div class="about__block-skills__list">
                             <div class="about__block-skills__item" v-for="(skill, index) in computedSkills" :key="index">
                                 <div class="about__block-skills__item-img">
-                                    <img :src="getImageUrl(`${skill.img}`)" alt="">
+                                    <img :src="skill.img" alt="">
                                 </div>
                                 <h4 class="about__block-skills__item-title">{{ skill.title }}</h4>
                             </div>
@@ -98,6 +94,22 @@ const computedSkills = computed(() => [
                 align-items: center
                 padding: 40px
             &__item
+                display: flex
+                flex-direction: column
+                align-items: center
+                gap: 5px
+                &-img 
+                    border: 1px solid rgb(202, 217, 236)
+                    background: rgb(255, 255, 255)
+                    width: 55px
+                    height: 55px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 50%
+                    & img 
+                        width: 25px
+                        height: 25px
                 &-title
                     font-family: Montserrat Alternates
                     font-size: 16px

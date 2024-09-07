@@ -5,5 +5,6 @@
 <template>
     <div>
         <AboutComponent />
+        <WorksComponent />
     </div>
 </template>
