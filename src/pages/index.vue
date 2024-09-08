@@ -6,5 +6,6 @@
     <div>
         <AboutComponent />
         <WorksComponent />
+        <ContactsViewBlock />
     </div>
 </template>
