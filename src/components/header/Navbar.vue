@@ -1,19 +1,22 @@
 <script setup>
 const navbarLinks = computed(() => [
     {
-        title: 'icon',
+        type: 'icon',
         link: '#home'
     },
     {
         title: 'О себе',
+        type: 'title',
         link: '#about',
     },
     {
         title: 'Работы',
+        type: 'title',
         link: '#works',
     },
     {
         title: 'Контакты',
+        type: 'title',
         link: '#contacts'
     }
 ])
@@ -23,7 +26,12 @@ const navbarLinks = computed(() => [
     <nav class="header__navbar">
         <ul class="header__navbar-links">
             <li class="header__navbar-link" v-for="(link, index) in navbarLinks" :key="index">
-                <a href="#">{{ link.title }}</a>
+                <a href="#">
+                    <template v-if="link.type === 'title'">{{ link.title }}</template>
+                    <span v-if="link.type === 'icon'" class="header__navbar-icon">
+                        <img src="@/assets/images/icons/home-icon.svg" alt="">
+                    </span>
+                </a>
             </li>
         </ul>
     </nav>
@@ -55,6 +63,7 @@ const navbarLinks = computed(() => [
             display: flex
             width: 100% 
             justify-content: space-between
+            align-items: center
         &-link 
             font-size: 24px
             line-height: 29px
@@ -63,5 +72,10 @@ const navbarLinks = computed(() => [
                 font-family: Montserrat Alternates
                 letter-spacing: 0px
                 font-weight: 700
-        
+        &-icon 
+            padding: 8px 16px
+            border-radius: 40px
+            background: rgb(41, 41, 41)
+            display: block
+
 </style>

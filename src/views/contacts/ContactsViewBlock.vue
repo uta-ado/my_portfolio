@@ -38,6 +38,8 @@ const computedContactsList = computed(() => [
                     </ul>
                 </div>
             </div>
+            <div class="borders-top borders-img "><img src="@/assets/images/bg/border-up-first-variant.png" alt=""></div>
+            <div class="borders-bottom borders-img "><img src="@/assets/images/bg/border-bottom-first-variant.png" alt=""></div>
         </div>
     </div>
 </template>
@@ -61,6 +63,15 @@ const computedContactsList = computed(() => [
         &-wrapper 
             display: flex
             justify-content: center
+            position: relative
+            & .borders-top 
+                position: absolute
+                right: -265px
+                top: -380px
+            & .borders-bottom 
+                position: absolute
+                left: -265px
+                bottom: -280px
         &-info 
             display: flex 
             gap: 94px

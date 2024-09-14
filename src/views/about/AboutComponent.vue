@@ -46,7 +46,19 @@ const computedSkills = computed(() => [
                         </div>
                     </div>
                 </div>
-                <div class="about__block-right"></div>
+                <div class="about__block-right">
+                    <div class="about__block-right__img-wrapper">
+                        <img src="@/assets/images/about/my_photo.png" alt="" class="about__block-right__img">
+                        <div class="about__icon-star">
+                            <img src="@/assets/images/icons/about_star.svg" alt="" class="about__icon-star">
+                        </div>
+                        <div class="about__icon-headerset">
+                            <img src="@/assets/images/icons/about-headerset.svg" alt="" class="about__icon-headerset">
+                        </div>
+                    </div>
+                </div>
+                <div class="borders-top borders-img "><img src="@/assets/images/bg/border-up-first-variant.png" alt=""></div>
+                <div class="borders-bottom borders-img "><img src="@/assets/images/bg/border-bottom-first-variant.png" alt=""></div>
             </div>
         </div>
     </section>
@@ -56,6 +68,14 @@ const computedSkills = computed(() => [
 <style lang="sass">
 .about
     padding: 99px 0px 367px 0px
+    & .borders-top 
+        position: absolute
+        right: -265px
+        top: -380px
+    & .borders-bottom 
+        position: absolute
+        left: -265px
+        bottom: -280px
     &__wrapper 
         display: flex
         flex-direction: column
@@ -64,9 +84,27 @@ const computedSkills = computed(() => [
     &__block
         display: flex
         justify-content: space-between
+        position: relative
+        &-right
+            &__img 
+                &-wrapper 
+                    width: 453.76px
+                    max-height: 564px
+                    position: relative
+                    & .about__icon-star 
+                        position: absolute
+                        left: -45px
+                        top: -32px
+                        width: 163px
+                        height: 160px
+                    & .about__icon-headerset
+                        position: absolute
+                        right: -15px
+                        bottom: 0px
         &-left 
             display: flex
             flex-direction: column
+            justify-content: end
             gap: 35px
             width: 55%
             &__title

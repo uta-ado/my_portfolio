@@ -26,6 +26,8 @@ const computedFloatItems = computed(() => [
                 <div class="header__center-block__wrapper">
                     <h1 class="header__center-block__title">Портфолио</h1>
                     <p class="header__center-block__subtitle">-Графический дизайнер-</p>
+                    <img src="@/assets/images/icons/sweet-star-icon.svg" alt="" class="header__center-block-right" >
+                    <img src="@/assets/images/icons/sweet-star-icon.svg" alt="" class="header__center-block-left" >
                 </div>
             </div>
             <img src="@/assets/images/bg/header__bg.png" alt="" class="header__img-background__photo">
@@ -47,6 +49,18 @@ const computedFloatItems = computed(() => [
         justify-content: center
         padding-top: 50px
         height: 100vh
+        &__center 
+            &-block
+                &__wrapper 
+                    position: relative
+                &-right
+                    position: absolute 
+                    right: -107px
+                    top: 0px
+                &-left
+                    position: absolute
+                    left: -107px
+                    bottom: 0px
         &__marquee
             &-wrapper 
                 height: 7%

@@ -31,6 +31,8 @@ const computedApps = computed(() => [
                     <a href="#" class="apps__item-btn">Подробнее</a>
                 </div>
             </div>
+            <div class="borders-top borders-img "><img src="@/assets/images/bg/border-up-first-variant.png" alt=""></div>
+            <div class="borders-bottom borders-img "><img src="@/assets/images/bg/border-bottom-first-variant.png" alt=""></div>
         </div>
     </div>    
 </template>
@@ -38,10 +40,19 @@ const computedApps = computed(() => [
 <style lang="sass" scoped>
 .apps
     &__list 
+        position: relative
         display: flex
         flex-direction: column
         gap: 40px
         margin: 100px 0
+        & .borders-top 
+            position: absolute
+            right: -265px
+            top: -380px
+        & .borders-bottom 
+            position: absolute
+            left: -265px
+            bottom: -280px
     &__item 
         display: flex
         flex-direction: row
