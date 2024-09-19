@@ -1,0 +1,87 @@
+@include media(1900px)
+    .header 
+        &__center
+            &-block
+                &__title
+                    font-size: 160px
+                &__subtitle
+                    font-size: 50px
+    
+@include media(1620px)
+    .header 
+        &__center
+            &-block
+                &__title
+                    font-size: 140px
+                    line-height: 230px
+                &__subtitle
+                    font-size: 40px
+    
+@include media(1430px)
+    .borders-img 
+        width: 240px
+        height: 240px
+    .section-title 
+        font-size: 67px
+        line-height: 90px
+    .section-subtitle 
+        font-size: 34px
+        line-height: 50px
+    .header 
+        padding-top: 20px
+        &__center
+            &-block
+                &__title
+                    font-size: 120px
+                    line-height: 210px
+                &__subtitle
+                    font-size: 30px
+                &-right, &-left
+                    width: 98px
+                    height: 98px
+    .about
+        padding-bottom: 180px
+
+    .about .borders-top, .apps__list .borders-top, .contacts__block-wrapper .borders-top
+        right: -155px !important
+        top: -235px !important
+    .about .borders-bottom, .apps__list .borders-bottom, .contacts__block-wrapper .borders-bottom
+        left: -155px !important
+        bottom: -235px !important
+    .illustr
+        &__block
+            min-height: 1400px
+    .footer 
+        margin-top: 220px !important
+    
+    
+@include media(1200px)
+    .header
+        &__navbar 
+            max-width: 445px
+            &-link 
+                font-size: 18px
+                line-height: 24px
+        &__center
+            &-block
+                &__title 
+                    font-size: 100px
+                    line-height: 160px
+    .about
+        &__block
+            flex-direction: column-reverse
+            align-items: center
+            &-left
+                &__title 
+                    text-align: center
+    .apps
+        &__item
+            flex-direction: column !important
+    .illustr
+        &__block
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 20px
+            &-item 
+                position: static !important

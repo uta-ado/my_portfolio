@@ -17,10 +17,13 @@ const computedApps = computed(() => [
         <h2 class="apps__title section-subtitle">Приложения</h2>
         <div class="apps__list">
             <div class="apps__item" v-for="(item, index) in computedApps" :key="index">
-                <div class="apps__item-img">
+                <div class="apps__item-img" :class="{ 'reverse': !((index+1) % 2 === 0) }">
                     <img :src="`./images/works/${item.imageName}`" alt="">
                 </div>
                 <div class="apps__item-info">
+                    <div class="apps__item-twostars">
+                        <img src="@/assets/images/icons/two_stars.svg" alt="">
+                    </div>
                     <div class="apps__item-index">
                         <div class="apps__item-index__bg" />
                         <span class="apps__item-index__number">
@@ -61,13 +64,21 @@ const computedApps = computed(() => [
         align-items: center
         padding: 55px 60px 55px 60px
         border-radius: 9px
-        background: rgb(21, 21, 21)
+        background: rgb(21, 21, 21) 
         &-img 
             box-shadow: 8px 8px 35px 0px rgba(0, 0, 0, 0.25)
             background: linear-gradient(266.57deg, rgb(122, 135, 251) 2.809%,rgb(255, 212, 156) 96.791%)
             max-width: 544px
             min-width: 544px
             width: 100%
+            &.reverse 
+                background: linear-gradient(90.00deg, rgb(122, 135, 251),rgb(255, 212, 156) 100%)
+        &-info 
+            position: relative
+        &-twostars
+            position: absolute
+            right: 0px 
+            top: -160px
         &-btn 
             border-radius: 39.3px
             background: linear-gradient(90.00deg, rgb(122, 135, 251),rgb(255, 212, 156) 100%)

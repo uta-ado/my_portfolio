@@ -22,7 +22,7 @@ const computedContactsList = computed(() => [
 
 <template>
     <div class="contacts">
-        <h2 class="contacts__title section-title">Контакты</h2>
+        <h2 class="contacts__title section-title"><span>Контакты  <img src="@/assets/images/icons/section-star.svg" alt=""></span></h2>
         <div class="contacts__block-wrapper">
             <div class="contacts__block">
                 <div class="contacts__block-info">

@@ -4,8 +4,8 @@
 
 <template>
     <div>
-        <AboutComponent />
-        <WorksComponent />
-        <ContactsViewBlock />
+        <AboutComponent id="about" />
+        <WorksComponent id="works" />
+        <ContactsViewBlock id="contacts" />
     </div>
 </template>

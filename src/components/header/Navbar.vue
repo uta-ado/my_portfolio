@@ -26,12 +26,12 @@ const navbarLinks = computed(() => [
     <nav class="header__navbar">
         <ul class="header__navbar-links">
             <li class="header__navbar-link" v-for="(link, index) in navbarLinks" :key="index">
-                <a href="#">
+                <router-link  :to="link.link">
                     <template v-if="link.type === 'title'">{{ link.title }}</template>
                     <span v-if="link.type === 'icon'" class="header__navbar-icon">
                         <img src="@/assets/images/icons/home-icon.svg" alt="">
                     </span>
-                </a>
+                </router-link>
             </li>
         </ul>
     </nav>

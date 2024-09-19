@@ -23,7 +23,7 @@ const computedSkills = computed(() => [
 <template>
     <section class="about">
         <div class="about__wrapper">
-            <h2 class="about__title section-title">О себе <img src="@/assets/images/icons/section-star.svg" alt=""></h2>
+            <h2 class="about__title section-title"><span>О себе <img src="@/assets/images/icons/section-star.svg" alt=""></span></h2>
             <div class="about__block">
                 <div class="about__block-left">
                     <div class="about__block-info">
