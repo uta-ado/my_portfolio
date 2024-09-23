@@ -28,7 +28,7 @@ const computedMenu = computed(() => [
 </template>
 
 
-<style lang="sass" scoped>
+<style lang="sass">
 .footer 
     padding: 128px 0px
     background: rgb(21, 21, 21)

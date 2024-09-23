@@ -31,16 +31,18 @@ const computedApps = computed(() => [
                         </span>
                     </div>
                     <p class="apps__item-text">{{ item.text }}</p>
-                    <a href="#" class="apps__item-btn">Подробнее</a>
+                    <div class="apps__item-btn__wrapper">
+                        <a href="#" class="apps__item-btn">Подробнее</a>
+                    </div>
                 </div>
             </div>
-            <div class="borders-top borders-img "><img src="@/assets/images/bg/border-up-first-variant.png" alt=""></div>
+            <div class="borders-top borders-img "><img src="@/assets/images/bg/border-top-second-variant.png" alt=""></div>
             <div class="borders-bottom borders-img "><img src="@/assets/images/bg/border-bottom-first-variant.png" alt=""></div>
         </div>
     </div>    
 </template>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .apps
     &__list 
         position: relative

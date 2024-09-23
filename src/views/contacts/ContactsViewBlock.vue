@@ -45,7 +45,7 @@ const computedContactsList = computed(() => [
 </template>
 
 
-<style lang="sass" scoped>
+<style lang="sass">
 .contacts
     &__title 
         margin-bottom: 180px

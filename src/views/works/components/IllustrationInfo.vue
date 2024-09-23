@@ -17,7 +17,7 @@
     </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .illustr 
     &__title 
         margin-bottom: 80px

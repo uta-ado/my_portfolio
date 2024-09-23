@@ -29,5 +29,5 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="sass">
 </style>
