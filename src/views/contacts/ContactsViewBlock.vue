@@ -38,6 +38,13 @@ const computedContactsList = computed(() => [
                     </ul>
                 </div>
             </div>
+            <div class="contacts__block mobile">
+                <div class="contacts__block-icons">
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="@/assets/images/icons/phone.svg" alt="" class="contacts__block-icon"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="@/assets/images/icons/mail.svg" alt="" class="contacts__block-icon"></a>
+                    <a href="https://www.behance.net/" target="_blank"><img src="@/assets/images/icons/telegram.svg" alt="" class="contacts__block-icon"></a>
+                </div>
+            </div>
             <div class="borders-top borders-img "><img src="@/assets/images/bg/border-up-first-variant.png" alt=""></div>
             <div class="borders-bottom borders-img "><img src="@/assets/images/bg/border-bottom-first-variant.png" alt=""></div>
         </div>
@@ -60,6 +67,29 @@ const computedContactsList = computed(() => [
         border-radius: 10px
         background: rgb(21, 21, 21)
         box-shadow: -16px 15px 4px 0px rgba(0, 0, 0, 0.25)
+        &.mobile 
+            min-height: auto
+            max-width: none
+            padding: 0px
+            box-shadow: none
+            border-radius: none
+            background: none
+            display: none
+            justify-content: center
+        &-icons
+            font-size: 2.5em
+            height: 50px
+            overflow: hidden
+            border-bottom: 1px solid #abc
+            display: flex
+            gap: 60px   
+            & a
+                position: relative
+                top: 30px
+                margin: 0 10px
+                transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000)
+                &:hover
+                    top: 5px
         &-wrapper 
             display: flex
             justify-content: center

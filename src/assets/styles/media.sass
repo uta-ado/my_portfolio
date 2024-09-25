@@ -164,6 +164,11 @@
             &-img 
                 max-width: 100% !important
                 min-width: auto !important
+    .contacts 
+        &__block
+            display: none
+            &.mobile 
+                display: flex    
     
 @include media(670px)
     .header
@@ -196,6 +201,9 @@
             height: 32.72px
     .header
         height: 285px
+        position: relative
+        width: 100vw
+        left: -15px
         &__img-background__block
             height: 285px
             // position: fixed
@@ -218,8 +226,14 @@
                     left: -44px
                     bottom: -10px
         &__marquee
-            &-wrapper 
-                display: none !important
+            &-item
+                &__title 
+                    font-size: 13px
+                    line-height: 18px
+                &__img 
+                    width: 13px
+                    height: 13px
+                
     .about 
         &__title 
             margin-bottom: 55px
@@ -240,6 +254,10 @@
             &-skills
                 &__list 
                     padding: 10px 20px
+                &__item
+                    &-title 
+                        font-size: 12px
+                        line-height: 15px
         &__icon
             &-star 
                 left: -18px !important
@@ -265,3 +283,11 @@
             gap: 15px
             &-link 
                 font-size: 14px !important
+
+@include media(490px)
+    .header 
+        &__marquee
+            &-item 
+                &__title
+                    font-size: 9px
+                    line-height: 14px
