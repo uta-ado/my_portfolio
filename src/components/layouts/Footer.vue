@@ -3,12 +3,15 @@
 const computedMenu = computed(() => [
     {
         title: 'Главная',
+        link:'/',
     },
     {
         title: 'О себе',
+        link:'#about',
     },
     {
         title: 'Работы',
+        link:'#works',
     },
 ])
 </script>
@@ -19,7 +22,7 @@ const computedMenu = computed(() => [
             <div class="footer__wrapper">
                 <ul class="footer__menu">
                     <li class="footer__menu-li" v-for="(item, index) in computedMenu" :key="index">
-                        <a href="#" class="footer__menu-link">{{ item.title }}</a>
+                        <router-link :to="item.link" class="footer__menu-link">{{ item.title }}</router-link>
                     </li>
                 </ul>
             </div>

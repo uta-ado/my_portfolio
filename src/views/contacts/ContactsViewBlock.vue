@@ -40,9 +40,9 @@ const computedContactsList = computed(() => [
             </div>
             <div class="contacts__block mobile">
                 <div class="contacts__block-icons">
-                    <a href="https://www.linkedin.com/" target="_blank"><img src="@/assets/images/icons/phone.svg" alt="" class="contacts__block-icon"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img src="@/assets/images/icons/mail.svg" alt="" class="contacts__block-icon"></a>
-                    <a href="https://www.behance.net/" target="_blank"><img src="@/assets/images/icons/telegram.svg" alt="" class="contacts__block-icon"></a>
+                    <a href="tel:998971444901"><img src="@/assets/images/icons/phone.svg" alt="" class="contacts__block-icon"></a>
+                    <a href="mailto:misalol920@gmail.com"><img src="@/assets/images/icons/mail.svg" alt="" class="contacts__block-icon"></a>
+                    <a href="https://t.me/L_misa" target="_blank"><img src="@/assets/images/icons/telegram.svg" alt="" class="contacts__block-icon"></a>
                 </div>
             </div>
             <div class="borders-top borders-img "><img src="@/assets/images/bg/border-up-first-variant.png" alt=""></div>
