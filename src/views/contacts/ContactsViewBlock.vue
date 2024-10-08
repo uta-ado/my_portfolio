@@ -24,18 +24,20 @@ const computedContactsList = computed(() => [
     <div class="contacts">
         <h2 class="contacts__title section-title"><span>Контакты  <img src="@/assets/images/icons/section-star.svg" alt=""></span></h2>
         <div class="contacts__block-wrapper">
-            <div class="contacts__block">
-                <div class="contacts__block-info">
-                    <ul class="contacts__block-info__title-list">
-                        <li v-for="(item, index) in computedContactsList" :key="index">
-                            <h4 class="contacts__block-item__title">{{ item.title }}</h4>
-                        </li>
-                    </ul>
-                    <ul class="contacts__block-info__value-list">
-                        <li v-for="(item, index) in computedContactsList" :key="index">
-                            <a href="" class="contacts__block-item__value">{{ item.value }}</a>
-                        </li>
-                    </ul>
+            <div class="contacts__block-border">
+                <div class="contacts__block">
+                    <div class="contacts__block-info">
+                        <ul class="contacts__block-info__title-list">
+                            <li v-for="(item, index) in computedContactsList" :key="index">
+                                <h4 class="contacts__block-item__title">{{ item.title }}</h4>
+                            </li>
+                        </ul>
+                        <ul class="contacts__block-info__value-list">
+                            <li v-for="(item, index) in computedContactsList" :key="index">
+                                <a href="" class="contacts__block-item__value">{{ item.value }}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="contacts__block mobile">
@@ -66,7 +68,14 @@ const computedContactsList = computed(() => [
         align-items: center
         border-radius: 10px
         background: rgb(21, 21, 21)
-        box-shadow: -16px 15px 4px 0px rgba(0, 0, 0, 0.25)
+        &-border 
+            clip-path: inset(0 round 13px)
+            box-shadow: -16px 15px 4px 0px rgba(0, 0, 0, 0.25)
+            background: linear-gradient(180deg, #FDAC74 0%, #7F8AF8 100%)
+            border: 7px solid
+            border-image-source: linear-gradient(180deg, #FDAC74 0%, #7F8AF8 100%)
+            border-image-slice: 1
+            border-image-width: 7px
         &.mobile 
             min-height: auto
             max-width: none
