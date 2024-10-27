@@ -1,4 +1,5 @@
 <script setup>
+import { WOW } from "wowjs"
 
 const computedSkills = computed(() => [
     {
@@ -18,6 +19,7 @@ const computedSkills = computed(() => [
         img: './images/about/corel.svg'
     },
 ])
+onMounted(() => new WOW({live:false}).init())
 </script>
 
 <template>

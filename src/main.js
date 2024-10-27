@@ -4,6 +4,9 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import "animate.css"
+import "wowjs/css/libs/animate.css"
+
 
 const app = createApp(App)
 

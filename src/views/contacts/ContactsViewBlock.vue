@@ -1,6 +1,19 @@
 <script setup>
 
 
+const getLinkByType = (type, value) => {
+    switch (type) {
+        case 'phone':
+            return `tel:${value}`
+        case 'mail':
+            return `mailto:${value}`
+        case 'telegram':
+            return `https://t.me/${value.slice(1)}`
+        default:
+            return ''
+    }
+}
+
 const computedContactsList = computed(() => [
     {
         title: 'Номер:',
@@ -34,7 +47,7 @@ const computedContactsList = computed(() => [
                         </ul>
                         <ul class="contacts__block-info__value-list">
                             <li v-for="(item, index) in computedContactsList" :key="index">
-                                <a href="" class="contacts__block-item__value">{{ item.value }}</a>
+                                <a :href="getLinkByType(item.type, item.value)"  class="contacts__block-item__value">{{ item.value }}</a>
                             </li>
                         </ul>
                     </div>

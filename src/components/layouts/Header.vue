@@ -19,7 +19,7 @@ const computedFloatItems = computed(() => [
 </script>
 
 <template>
-    <header class="header">
+    <header class="header" id="header">
         <Navbar />
         <div class="header__img-background__block">
             <div class="header__center-block">

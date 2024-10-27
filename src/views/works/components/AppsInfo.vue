@@ -3,10 +3,12 @@
 const computedApps = computed(() => [
     {
         text: 'Приложение для покупки  авия билетов',
+        href: 'https://www.behance.net/gallery/210877801/mobilnoe-prilozhenie-dlja-pokupki-avia-biletov',
         imageName: 'aviabilety.png'
     },
     {
         text: 'Приложение для чтения  переведенной манги и комиксов',
+        href: 'https://www.behance.net/gallery/210883679/prilozhenie-dlja-chtenija-mangi-i-komiksov',
         imageName: 'manga.png'
     }
 ])
@@ -32,7 +34,7 @@ const computedApps = computed(() => [
                     </div>
                     <p class="apps__item-text">{{ item.text }}</p>
                     <div class="apps__item-btn__wrapper">
-                        <a href="#" class="apps__item-btn">Подробнее</a>
+                        <a :href="item.href" target="_blank" class="apps__item-btn">Подробнее</a>
                     </div>
                 </div>
             </div>
