@@ -27,7 +27,11 @@ const computedApps = computed(() => [
                         <img src="@/assets/images/icons/two_stars.svg" alt="">
                     </div>
                     <div class="apps__item-index">
-                        <div class="apps__item-index__bg" />
+                        <div class="apps__item-index__bg">
+                            <div class="border-bg"></div>
+                            <div class="blur-bg"></div>
+                            <div class="dark-bg"></div>
+                        </div>
                         <span class="apps__item-index__number">
                             {{ index+1 }}
                         </span>
@@ -115,28 +119,35 @@ const computedApps = computed(() => [
             align-items: center
             justify-content: center
             &__bg 
-                &::after 
-                    content: ''
-                    background: linear-gradient(90.00deg, rgb(122, 135, 251),rgb(255, 212, 156) 100%)
+                & .border-bg
+                    background: linear-gradient(90deg, #7a87fb, #ffd49c)
                     position: absolute
                     width: 52.93px
                     height: 53.22px
-                    left: 0.29px
+                    left: .29px
                     top: 0
-                    z-index: 9
+                    z-index: 8
                     border-radius: 26.88px
-                &::before
-                    content: ''
+                & .blur-bg 
                     border-radius: 26.88px
+                    -webkit-backdrop-filter: blur(25.2px)
                     backdrop-filter: blur(25.2px)
-                    background: rgba(21, 21, 21, 0.05)
+                    background: #1515150d
                     position: absolute
                     width: 53.22px
                     height: 53.22px
                     left: 0
                     top: 0
                     z-index: 10
-                    /* rgb(21, 21, 21) */
+                & .dark-bg 
+                    border-radius: 26.88px
+                    width: 53.22px
+                    height: 52.22px
+                    position: absolute
+                    left: 0
+                    top: 0
+                    z-index: 9
+                    background: #151515
             &__number 
                 background: linear-gradient(90.00deg, rgb(122, 135, 251),rgb(255, 212, 156))
                 -webkit-background-clip: text

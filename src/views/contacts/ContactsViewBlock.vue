@@ -107,11 +107,11 @@ const computedContactsList = computed(() => [
             gap: 60px   
             & a
                 position: relative
-                top: 30px
+                top: 15px
                 margin: 0 10px
                 transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000)
                 &:hover
-                    top: 5px
+                    top: 0px
         &-wrapper 
             display: flex
             justify-content: center
