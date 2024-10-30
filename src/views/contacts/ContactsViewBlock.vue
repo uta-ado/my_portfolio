@@ -53,13 +53,6 @@ const computedContactsList = computed(() => [
                     </div>
                 </div>
             </div>
-            <div class="contacts__block mobile">
-                <div class="contacts__block-icons">
-                    <a href="tel:998971444901"><img src="@/assets/images/icons/phone.svg" alt="" class="contacts__block-icon"></a>
-                    <a href="mailto:misalol920@gmail.com"><img src="@/assets/images/icons/mail.svg" alt="" class="contacts__block-icon"></a>
-                    <a href="https://t.me/L_misa" target="_blank"><img src="@/assets/images/icons/telegram.svg" alt="" class="contacts__block-icon"></a>
-                </div>
-            </div>
             <div class="borders-top borders-img "><img src="@/assets/images/bg/border-up-first-variant.png" alt=""></div>
             <div class="borders-bottom borders-img "><img src="@/assets/images/bg/border-bottom-first-variant.png" alt=""></div>
         </div>
@@ -89,29 +82,6 @@ const computedContactsList = computed(() => [
             border-image-source: linear-gradient(180deg, #FDAC74 0%, #7F8AF8 100%)
             border-image-slice: 1
             border-image-width: 7px
-        &.mobile 
-            min-height: auto
-            max-width: none
-            padding: 0px
-            box-shadow: none
-            border-radius: none
-            background: none
-            display: none
-            justify-content: center
-        &-icons
-            font-size: 2.5em
-            height: 50px
-            overflow: hidden
-            border-bottom: 1px solid #abc
-            display: flex
-            gap: 60px   
-            & a
-                position: relative
-                top: 15px
-                margin: 0 10px
-                transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000)
-                &:hover
-                    top: 0px
         &-wrapper 
             display: flex
             justify-content: center

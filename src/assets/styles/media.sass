@@ -173,11 +173,8 @@
                 min-width: auto !important
     .contacts 
         &__block
-            display: none
-            &-border 
-                display: none
-            &.mobile 
-                display: flex    
+            padding: 10px 20px
+            min-height: 249px
     
 @include media(670px)
     .header
@@ -200,6 +197,12 @@
             &-item 
                 min-width: auto
                 max-width: 100%
+    .contacts 
+        &__block
+            padding: 10px 15px
+            min-height: 220px
+            &-info 
+                gap: 14px
 
 @include media(576px)
     .borders-img 
@@ -298,6 +301,20 @@
                 top: 0px
                 left: 70px
     .contacts
+        &__block
+            min-height: 210px
+            &-border 
+                max-width: 100%
+                width: 100%
+            &-info 
+                &__title-list, &__value-list 
+                    gap: 10px
+            &-item 
+                &__title 
+                    font-size: 16px 
+                &__value 
+                    font-size: 16px
+                
         &__title
             margin-bottom: 30px
     .footer 
